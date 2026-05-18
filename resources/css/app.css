@@ -1224,3 +1224,107 @@ body.login-page {
         width: 100%;
     }
 }
+
+/* === 2026 Stylish Refresh === */
+:root {
+    --accent-1: #7c3aed;
+    --accent-2: #06b6d4;
+    --accent-3: #f43f5e;
+}
+
+body {
+    background:
+        radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--accent-1) 14%, transparent), transparent 35%),
+        radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--accent-2) 18%, transparent), transparent 35%),
+        var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--bar-color) 88%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--line-color) 70%, transparent);
+    padding: 18px 28px;
+}
+
+header a {
+    letter-spacing: 0.08em;
+    font-size: 14px;
+    position: relative;
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    transition: width .2s ease;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+.article .container,
+.article .image__container,
+.article .post,
+.article .highlighted {
+    border: 1px solid color-mix(in srgb, var(--line-color) 80%, transparent);
+    backdrop-filter: blur(4px);
+}
+
+.article .post {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.article .post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 35px -20px color-mix(in srgb, var(--accent-1) 45%, #000);
+}
+
+.article .posts img,
+.article .image__container img {
+    border: 1px solid color-mix(in srgb, var(--line-color) 60%, transparent);
+}
+
+button,
+.btn,
+input[type="submit"],
+a.button {
+    border-radius: 12px !important;
+}
+
+footer {
+    margin-top: 32px;
+    background: linear-gradient(120deg,
+        color-mix(in srgb, var(--accent-1) 24%, var(--bar-color)),
+        color-mix(in srgb, var(--accent-2) 22%, var(--bar-color)));
+    color: #fff;
+    text-align: center;
+    padding: 18px 12px;
+    border-top: 1px solid color-mix(in srgb, #fff 25%, transparent);
+}
+
+footer p {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+    header {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .article .posts {
+        padding: 10px;
+    }
+}
