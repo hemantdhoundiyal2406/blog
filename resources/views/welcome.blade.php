@@ -9,299 +9,45 @@
     @endsection
 
     <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-            font-family:'Poppins', sans-serif;
-            background:#f5f5f5;
-            color:#111827;
-        }
-
-        a{
-            text-decoration:none;
-            color:inherit;
-        }
-
-        .article{
-            width:100%;
-            min-height:100vh;
-            background:#f5f5f5;
-        }
-
-        /* ================= HERO BANNER ================= */
-
-        .hero-banner{
-            width:100%;
-            height:520px;
-            position:relative;
-            overflow:hidden;
-        }
-
-        .hero-banner img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-
-        .hero-overlay{
-            position:absolute;
-            inset:0;
-            background:rgba(0,0,0,0.45);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            padding:20px;
-        }
-
-        .hero-content{
-            max-width:850px;
-            color:#fff;
-        }
-
-        .hero-content h1{
-            font-size:68px;
-            font-weight:700;
-            margin-bottom:20px;
-            line-height:1.1;
-        }
-
-        .hero-content p{
-            font-size:18px;
-            line-height:1.8;
-            color:#e5e7eb;
-        }
-
-        /* ================= MAIN CONTAINER ================= */
-
-        .main-content{
-            width:100%;
-            
-            margin:auto;
-           
-        }
-
-        /* ================= FEATURED POSTS ================= */
-
-        .image__container{
-            width:100%;
-            margin-bottom:60px;
-        }
-
-        .highlighted_icon{
-            display:inline-flex;
-            align-items:center;
-            gap:8px;
-            background:#111827;
-            color:#fff;
-            padding:12px 20px;
-            border-radius:8px;
-            margin-bottom:25px;
-            font-size:15px;
-            font-weight:600;
-        }
-
-        .highlighted_icon i{
-            color:#facc15;
-        }
-
-        .featured-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-            gap:30px;
-        }
-
-        .post-highlighted{
-            background:#fff;
-            border-radius:18px;
-            overflow:hidden;
-            border:1px solid #e5e7eb;
-        }
-
-        .post-highlighted img{
-            width:100%;
-            height:260px;
-            object-fit:cover;
-            display:block;
-        }
-
-        .post-highlighted .body{
-            padding:25px;
-        }
-
-        .top-info{
-            display:flex;
-            align-items:center;
-            gap:12px;
-            flex-wrap:wrap;
-            margin-bottom:18px;
-        }
-
-        .category{
-            padding:7px 16px;
-            border-radius:50px;
-            font-size:13px;
-            font-weight:600;
-        }
-
-        .reading-time{
-            font-size:14px;
-            color:#6b7280;
-        }
-
-        .top-info i{
-            color:#6b7280;
-        }
-
-        .title{
-            font-size:28px;
-            line-height:1.4;
-            font-weight:700;
-            margin-bottom:20px;
-            color:#111827;
-        }
-
-        .short_body{
-            font-size:15px;
-            line-height:1.8;
-            color:#6b7280;
-            margin-top:20px;
-        }
-
-        .user{
-            display:flex;
-            align-items:center;
-            gap:14px;
-        }
-
-        .user img{
-            width:52px;
-            height:52px;
-            border-radius:50%;
-            object-fit:cover;
-        }
-
-        .user .name{
-            font-weight:600;
-            color:#111827;
-        }
-
-        .user .date{
-            font-size:14px;
-            color:#6b7280;
-        }
-
-        /* ================= DOTS ================= */
-
-        .dots{
-            display:flex;
-            justify-content:center;
-            gap:10px;
-            margin-top:25px;
-        }
-
-        .dot{
-            cursor:pointer;
-            color:#9ca3af;
-            font-size:14px;
-        }
-
-        /* ================= POSTS SECTION ================= */
-
-        .posts{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-            gap:30px;
-        }
-
-        .posts > *{
-            background:#fff;
-            border-radius:18px;
-            overflow:hidden;
-            border:1px solid #e5e7eb;
-        }
-
-        /* ================= LOADER ================= */
-
-        .loading{
-            width:100%;
-            display:flex;
-            justify-content:center;
-            margin:40px 0;
-        }
-
-        .hidden{
-            display:none;
-        }
-
-        .loader{
-            width:55px;
-            height:55px;
-            border:4px solid #d1d5db;
-            border-top-color:#111827;
-            border-radius:50%;
-            animation:spin 1s linear infinite;
-        }
-
-        @keyframes spin{
-            100%{
-                transform:rotate(360deg);
-            }
-        }
-
-        /* ================= RESPONSIVE ================= */
-
-        @media(max-width:992px){
-
-            .hero-banner{
-                height:420px;
-            }
-
-            .hero-content h1{
-                font-size:52px;
-            }
-
-            .title{
-                font-size:24px;
-            }
-        }
-
-        @media(max-width:768px){
-
-            .hero-banner{
-                height:360px;
-            }
-
-            .hero-content h1{
-                font-size:38px;
-            }
-
-            .hero-content p{
-                font-size:15px;
-            }
-
-            .main-content{
-                padding:40px 20px;
-            }
-
-            .featured-grid{
-                grid-template-columns:1fr;
-            }
-
-            .posts{
-                grid-template-columns:1fr;
-            }
-
-            .post-highlighted img{
-                height:220px;
-            }
-        }
-
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:"Poppins",sans-serif;background:radial-gradient(circle at 10% 10%,#dbeafe 0%,transparent 40%),radial-gradient(circle at 90% 20%,#fae8ff 0%,transparent 35%),linear-gradient(160deg,#f8fafc 0%,#eef2ff 100%);color:#0f172a;}
+        a{text-decoration:none;color:inherit;}
+        .article{width:100%;min-height:100vh;background:transparent;}
+        .hero-banner{width:100%;height:560px;position:relative;overflow:hidden;border-radius:0 0 48px 48px;}
+        .hero-banner img{width:100%;height:100%;object-fit:cover;}
+        .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(2,6,23,.75) 0%,rgba(79,70,229,.45) 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;}
+        .hero-content{max-width:850px;color:#fff;backdrop-filter:blur(4px);}
+        .hero-content h1{font-size:72px;font-weight:700;margin-bottom:20px;line-height:1.1;}
+        .hero-content p{font-size:18px;line-height:1.8;color:#e2e8f0;}
+        .main-content{width:100%;max-width:1280px;margin:auto;padding:56px 20px 0;}
+        .image__container{width:100%;margin-bottom:60px;}
+        .highlighted_icon{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#312e81 0%,#7c3aed 100%);color:#fff;padding:12px 20px;border-radius:999px;margin-bottom:25px;font-size:15px;font-weight:600;}
+        .highlighted_icon i{color:#facc15;}
+        .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;}
+        .post-highlighted{background:rgba(255,255,255,.65);backdrop-filter:blur(10px);border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.8);box-shadow:0 22px 50px -20px rgba(30,41,59,.45);transition:all .25s ease;}
+        .post-highlighted:hover{transform:translateY(-6px);box-shadow:0 30px 60px -25px rgba(79,70,229,.5);}
+        .post-highlighted img{width:100%;height:260px;object-fit:cover;display:block;}
+        .post-highlighted .body{padding:25px;}
+        .top-info{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px;}
+        .category{padding:7px 16px;border-radius:50px;font-size:13px;font-weight:600;}
+        .reading-time{font-size:14px;color:#475569;}
+        .top-info i{color:#64748b;}
+        .title{font-size:28px;line-height:1.4;font-weight:700;margin-bottom:20px;color:#0f172a;}
+        .short_body{font-size:15px;line-height:1.8;color:#475569;margin-top:20px;}
+        .user{display:flex;align-items:center;gap:14px;}
+        .user img{width:52px;height:52px;border-radius:50%;object-fit:cover;}
+        .user .name{font-weight:600;color:#0f172a;}
+        .user .date{font-size:14px;color:#475569;}
+        .dots{display:flex;justify-content:center;gap:10px;margin-top:25px;}
+        .dot{cursor:pointer;color:#6366f1;font-size:14px;}
+        .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
+        .posts > *{background:rgba(255,255,255,.65);backdrop-filter:blur(10px);border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.8);box-shadow:0 20px 45px -24px rgba(30,41,59,.4);}
+        .loading{width:100%;display:flex;justify-content:center;margin:40px 0;}
+        .hidden{display:none;}
+        .loader{width:55px;height:55px;border:4px solid #d1d5db;border-top-color:#111827;border-radius:50%;animation:spin 1s linear infinite;}
+        @keyframes spin{100%{transform:rotate(360deg);}}
+        @media(max-width:992px){.hero-banner{height:460px;}.hero-content h1{font-size:52px;}.title{font-size:24px;}}
+        @media(max-width:768px){.hero-banner{height:380px;}.hero-content h1{font-size:38px;}.hero-content p{font-size:15px;}.main-content{padding:40px 16px 0;}.featured-grid,.posts{grid-template-columns:1fr;}.post-highlighted img{height:220px;}}
     </style>
 
     <div class="article">
